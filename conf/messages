@@ -1,0 +1,10 @@
+# https://www.playframework.com/documentation/latest/ScalaI18N
+
+constraint.required = 必須
+error.required = ※必須項目です！！
+
+userNm  = ユーザー名
+mailAd  = メールアドレス
+userPw  = パスワード
+
+postBd  = 投稿内容
