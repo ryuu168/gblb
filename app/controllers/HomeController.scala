@@ -20,7 +20,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
    * a path of `/`.
    */
   def index() = Action { implicit request: Request[AnyContent] =>
-    val characters = Characters.all()
+    val characters = CharacterJoinImages.all()
     println(characters)
     Ok(views.html.index(characters))
   }
