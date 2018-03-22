@@ -12,7 +12,7 @@ docker for mac またはdocker for windows
 # ～環境構築～
 前提条件ローカルで**docker**が起動していること<br>
 
-### KoDoのリポジトリをクローンする
+### gblbのリポジトリをクローンする
     git clone このリポジトリURL
 ### アプリケーション起動 
 -dはバックグラウンドで起動
@@ -24,8 +24,8 @@ $ docker-compose ps
 
       Name                    Command             State           Ports
 --------------------------------------------------------------------------------
-kodo_kodo_mysql_1   docker-entrypoint.sh mysqld   Up      0.0.0.0:3306->3306/tcp
-kodo_play           top                           Up      0.0.0.0:9000->9000/tcp
+gblb_mysql_1   docker-entrypoint.sh mysqld   Up      0.0.0.0:3306->3306/tcp
+gblb_play           top                           Up      0.0.0.0:9000->9000/tcp
 ```
 
 ### 起動したコンテナに接続 kodo_play
