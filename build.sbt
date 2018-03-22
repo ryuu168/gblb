@@ -1,4 +1,4 @@
-name := """KoDo"""
+name := """Gblb"""
 organization := "com.example"
 
 version := "1.0-SNAPSHOT"

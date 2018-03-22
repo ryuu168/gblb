@@ -1,12 +1,166 @@
 # --- !Ups
-CREATE TABLE `charcters` (
+CREATE TABLE `characters` (
  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
- `name` varchar(255) NOT NULL,
- `element` int(255) NOT NULL,
+ `name` varchar(30) NOT NULL,
+ `element` int(11) NOT NULL,
  `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
  `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_bin
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_bin;
+
+insert into characters(id, name, element) values(null, 'ユエル', 1);
+insert into characters(id, name, element) values(null, 'マギサ', 1);
+insert into characters(id, name, element) values(null, 'イオ（水着ver）', 1);
+insert into characters(id, name, element) values(null, 'アギエルバ', 1);
+insert into characters(id, name, element) values(null, 'アニラ', 1);
+insert into characters(id, name, element) values(null, 'ゼタ', 1);
+insert into characters(id, name, element) values(null, 'クラリス', 1);
+insert into characters(id, name, element) values(null, 'パーシヴァル', 1);
+insert into characters(id, name, element) values(null, 'ガンダゴウザ', 1);
+insert into characters(id, name, element) values(null, 'ラカム（リミテッドver)', 1);
+insert into characters(id, name, element) values(null, 'ヘルエス', 1);
+insert into characters(id, name, element) values(null, 'メーテラ（火属性ver）', 1);
+insert into characters(id, name, element) values(null, 'ザルハメリナ', 1);
+insert into characters(id, name, element) values(null, 'アオイドス', 1);
+insert into characters(id, name, element) values(null, 'アリーザ', 1);
+insert into characters(id, name, element) values(null, 'パーシヴァル（水着ver）', 1);
+insert into characters(id, name, element) values(null, 'ソシエ（火属性ver)', 1);
+insert into characters(id, name, element) values(null, 'アンスリア', 1);
+insert into characters(id, name, element) values(null, 'ベアトリクス（水着ver）', 1);
+insert into characters(id, name, element) values(null, 'スツルム（リミテッドver）', 1);
+insert into characters(id, name, element) values(null, 'グレア', 1);
+insert into characters(id, name, element) values(null, 'ニーナ・ドランゴ', 1);
+insert into characters(id, name, element) values(null, 'ダヌア（ハロウィンver）', 1);
+insert into characters(id, name, element) values(null, 'シャリオス17世', 1);
+insert into characters(id, name, element) values(null, 'テレーズ', 1);
+insert into characters(id, name, element) values(null, 'アルタイル', 2);
+insert into characters(id, name, element) values(null, 'リリィ', 2);
+insert into characters(id, name, element) values(null, 'シャルロッテ', 2);
+insert into characters(id, name, element) values(null, 'ランスロット', 2);
+insert into characters(id, name, element) values(null, 'ソシエ', 2);
+insert into characters(id, name, element) values(null, 'シルヴァ', 2);
+insert into characters(id, name, element) values(null, 'カタリナ（リミテッドver）', 2);
+insert into characters(id, name, element) values(null, 'ヨダルラーハ', 2);
+insert into characters(id, name, element) values(null, 'リルル', 2);
+insert into characters(id, name, element) values(null, 'イングウェイ', 2);
+insert into characters(id, name, element) values(null, 'ナルメア（水着ver）', 2);
+insert into characters(id, name, element) values(null, 'シャノワール', 2);
+insert into characters(id, name, element) values(null, 'ロミオ', 2);
+insert into characters(id, name, element) values(null, 'イシュミール', 2);
+insert into characters(id, name, element) values(null, 'アルルメイア（クリスマスver）', 2);
+insert into characters(id, name, element) values(null, 'キャタピラとヴィーラ', 2);
+insert into characters(id, name, element) values(null, 'ヴェイン', 2);
+insert into characters(id, name, element) values(null, 'ドランク（リミテッドver）', 2);
+insert into characters(id, name, element) values(null, 'イシュミール（水着ver）', 2);
+insert into characters(id, name, element) values(null, 'ディアンサ（水着ver）', 2);
+insert into characters(id, name, element) values(null, 'アン', 2);
+insert into characters(id, name, element) values(null, 'ユエル（水着ver）', 2);
+insert into characters(id, name, element) values(null, 'ヴァジラ', 2);
+insert into characters(id, name, element) values(null, 'アレーティア', 3);
+insert into characters(id, name, element) values(null, 'カリオストロ', 3);
+insert into characters(id, name, element) values(null, 'アルルメイヤ', 3);
+insert into characters(id, name, element) values(null, 'メルゥ', 3);
+insert into characters(id, name, element) values(null, 'ジーグフリード', 3);
+insert into characters(id, name, element) values(null, 'サラ', 3);
+insert into characters(id, name, element) values(null, 'ヴィーラ（水着ver）', 3);
+insert into characters(id, name, element) values(null, 'クラリス（クリスマスver）', 3);
+insert into characters(id, name, element) values(null, 'ユーステス', 3);
+insert into characters(id, name, element) values(null, 'キャサリン', 3);
+insert into characters(id, name, element) values(null, 'オイゲン（リミテッドver）', 3);
+insert into characters(id, name, element) values(null, 'ハレゼナ', 3);
+insert into characters(id, name, element) values(null, 'アイル', 3);
+insert into characters(id, name, element) values(null, 'ネモネ', 3);
+insert into characters(id, name, element) values(null, 'ユーステス（ハロウィンver）', 3);
+insert into characters(id, name, element) values(null, 'マキラ', 3);
+insert into characters(id, name, element) values(null, 'ラスティナ', 3);
+insert into characters(id, name, element) values(null, 'レ・フィーエ（土属性ver）', 3);
+insert into characters(id, name, element) values(null, 'メドゥーサ', 3);
+insert into characters(id, name, element) values(null, 'ユグドラシル', 3);
+insert into characters(id, name, element) values(null, 'バザラガ（土属性ver）', 3);
+insert into characters(id, name, element) values(null, 'イルザ', 3);
+insert into characters(id, name, element) values(null, 'メドゥーサ（バレンタインver）', 3);
+insert into characters(id, name, element) values(null, 'ガウェイン', 4);
+insert into characters(id, name, element) values(null, 'ネツァワルピリ', 4);
+insert into characters(id, name, element) values(null, 'メーテラ', 4);
+insert into characters(id, name, element) values(null, 'クリスティーナ', 4);
+insert into characters(id, name, element) values(null, 'レナ', 4);
+insert into characters(id, name, element) values(null, 'カルメリーナ', 4);
+insert into characters(id, name, element) values(null, 'ペトラ', 4);
+insert into characters(id, name, element) values(null, 'アンリエット', 4);
+insert into characters(id, name, element) values(null, 'フィーナ', 4);
+insert into characters(id, name, element) values(null, 'ロゼッタ（リミテッドver）', 4);
+insert into characters(id, name, element) values(null, 'アンチラ', 4);
+insert into characters(id, name, element) values(null, 'コルワ', 4);
+insert into characters(id, name, element) values(null, 'リーシャ（リミテッドver）', 4);
+insert into characters(id, name, element) values(null, 'メリッサベル', 4);
+insert into characters(id, name, element) values(null, 'ユイシス', 4);
+insert into characters(id, name, element) values(null, 'スカーサハ', 4);
+insert into characters(id, name, element) values(null, 'コルワ（水着ver）', 4);
+insert into characters(id, name, element) values(null, 'ジークフリード（浴衣ver）', 4);
+insert into characters(id, name, element) values(null, 'ランスロット（風属性ver）', 4);
+insert into characters(id, name, element) values(null, 'リヴァイ', 4);
+insert into characters(id, name, element) values(null, 'ティアマト', 4);
+insert into characters(id, name, element) values(null, 'ジャンヌダルク（水着ver）', 4);
+insert into characters(id, name, element) values(null, 'レ・フィーエ', 5);
+insert into characters(id, name, element) values(null, 'サルナーン', 5);
+insert into characters(id, name, element) values(null, 'セルエル', 5);
+insert into characters(id, name, element) values(null, 'レ・フィーエ（水着ver）', 5);
+insert into characters(id, name, element) values(null, 'シャルロッテ（水着ver）', 5);
+insert into characters(id, name, element) values(null, 'ソフィア', 5);
+insert into characters(id, name, element) values(null, 'ジャンヌダルク', 5);
+insert into characters(id, name, element) values(null, 'アルベール', 5);
+insert into characters(id, name, element) values(null, 'アーミラ', 5);
+insert into characters(id, name, element) values(null, 'ゼタ（水着ver）', 5);
+insert into characters(id, name, element) values(null, 'イオ（リミテッドver）', 5);
+insert into characters(id, name, element) values(null, 'フェリ', 5);
+insert into characters(id, name, element) values(null, 'ゾーイ', 5);
+insert into characters(id, name, element) values(null, 'ロザミア', 5);
+insert into characters(id, name, element) values(null, 'ヘルエス水着ver）', 5);
+insert into characters(id, name, element) values(null, 'ジュリエット', 5);
+insert into characters(id, name, element) values(null, 'ルシオ', 5);
+insert into characters(id, name, element) values(null, 'クラリス（光属性ver)', 5);
+insert into characters(id, name, element) values(null, 'バウダオーダ', 5);
+insert into characters(id, name, element) values(null, '三日月宗近', 5);
+insert into characters(id, name, element) values(null, 'サーヴァンツ　ドロシー＆クラウディア', 5);
+insert into characters(id, name, element) values(null, '木之本桜', 5);
+insert into characters(id, name, element) values(null, 'ヴィーラ（リミテッドver）', 5);
+insert into characters(id, name, element) values(null, 'マリー（クリスマスver）', 5);
+insert into characters(id, name, element) values(null, 'ゾーイ（ガチャver）', 5);
+insert into characters(id, name, element) values(null, 'サンダルフォン', 5);
+insert into characters(id, name, element) values(null, 'レディ・グレイ', 6);
+insert into characters(id, name, element) values(null, 'ケロベロス', 6);
+insert into characters(id, name, element) values(null, 'ロゼッタ（クリスマスver）', 6);
+insert into characters(id, name, element) values(null, 'バザラガ', 6);
+insert into characters(id, name, element) values(null, 'ヴィーラ', 6);
+insert into characters(id, name, element) values(null, 'サルナーン（闇属性ver）', 6);
+insert into characters(id, name, element) values(null, 'ダヌア（水着ver）', 6);
+insert into characters(id, name, element) values(null, 'ヴァンピィ', 6);
+insert into characters(id, name, element) values(null, 'カリオストロ（ハロウィンver）', 6);
+insert into characters(id, name, element) values(null, 'ナルメア', 6);
+insert into characters(id, name, element) values(null, 'ベアトリクス', 6);
+insert into characters(id, name, element) values(null, 'ジャンヌダルク（闇属性ver）', 6);
+insert into characters(id, name, element) values(null, '黒騎士（リミテッドver）', 6);
+insert into characters(id, name, element) values(null, 'フォルテ', 6);
+insert into characters(id, name, element) values(null, 'ゾーイ（水着ver）', 6);
+insert into characters(id, name, element) values(null, 'ヴァイト', 6);
+insert into characters(id, name, element) values(null, 'マルキアレス', 6);
+insert into characters(id, name, element) values(null, 'オーキス（リミテッドver）', 6);
+insert into characters(id, name, element) values(null, 'ゼタ（闇属性ver）', 6);
+insert into characters(id, name, element) values(null, 'カタリナ（闇属性ver）', 6);
+insert into characters(id, name, element) values(null, 'カリオストロ（闇属性ver）', 6);
+insert into characters(id, name, element) values(null, 'アザゼル', 6);
+insert into characters(id, name, element) values(null, 'オリヴェエ（リミテッドver）', 6);
+insert into characters(id, name, element) values(null, 'ウーノ', 2);
+insert into characters(id, name, element) values(null, 'ソーン', 5);
+insert into characters(id, name, element) values(null, 'サラーサ', 3);
+insert into characters(id, name, element) values(null, 'カトル', 2);
+insert into characters(id, name, element) values(null, 'フュンフ', 5);
+insert into characters(id, name, element) values(null, 'シス', 6);
+insert into characters(id, name, element) values(null, 'シエテ', 4);
+insert into characters(id, name, element) values(null, 'オクトー', 3);
+insert into characters(id, name, element) values(null, 'ニオ', 4);
+insert into characters(id, name, element) values(null, 'エッセル', 1);
+
 
 # --- !Downs
 DROP TABLE `characters`;
