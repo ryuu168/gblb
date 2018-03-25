@@ -9,25 +9,28 @@ import scala.concurrent.duration.Duration
 import scala.language.postfixOps
 
 
-case class CharacterDetails(id: Int, name: String, element: Int,  path: String)
+case class DetailsPage(cha_id: Int, cha_name: String, element: Int, cha_path: String, lb_name: String, lb_path: String)
 
-object CharacterDetails extends MysqlConnection {
+object DetailsPages extends MysqlConnection {
 
-  def characterShow(id: Int): Seq[CharacterDetails] = {
-    implicit val getCharacterResult = GetResult(r => CharacterDetails(r.<<, r.<<, r.<<, r.<<))
+  def characterShow(id: Int): Seq[DetailsPage] = {
+    implicit val getCharacterResult = GetResult(r => DetailsPage(r.<<, r.<<, r.<<, r.<<, r.<<, r.<<))
     val query = sql"""select
                       characters.id,
+                      characters.name,
                       characters.element,
                       images.path,
                       lb.name,
-                      ib_images.path
+                      lb_images.path
                       from characters
-                      left join images on character.id = images.character_id
+                      left join images on characters.id = images.character_id
                       left join character_has_lbs on characters.id = character_has_lbs.character_id
                       left join lb on lb.id = character_has_lbs.lb_id
                       left join lb_images on lb.id = lb_images.lb_id
                       where characters.id = ${id};
-      """.as[CharacterDetails]
+      """.as[DetailsPage]
     Await.result(database.run(query), Duration.Inf)
   }
 }
+
+case class 
