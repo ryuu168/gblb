@@ -1,11 +1,11 @@
-@(characters: Seq[Character])
+@(characters: Seq[CharacterJoinImage])
 @import b4.vertical.fieldConstructor
 
-@main("Welcome to Play") {
-  <h1>ようこそ</h1>
-<img src="@routes.Assets.versioned("images/icon_katarina.jpg")">
+@main("LB研究所（仮）") {
+
 @for(x <- characters){
-<p>@x.name</p>
-<img src="@routes.Assets.versioned("@x.???")"
+<a href="/characters/@x.id"><p>@x.name</p></a>
+<img src= @x.path>
 }
+
 }
