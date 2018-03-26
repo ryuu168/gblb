@@ -11,7 +11,8 @@ class DetailsPage @Inject()(val messagesApi: MessagesApi) extends Controller wit
   def index(id: Int) = Action { implicit request =>
     val chaShow = DetailsCharacters.characterShow(id)
     println(chaShow)
-    Ok(views.html.characterDetails(chaShow))
+    val lb = DetailsLbs.lbList(id)
+    println(lb)
+    Ok(views.html.characterDetails(chaShow,lb))
   }
 }
-

@@ -32,18 +32,19 @@ object DetailsCharacters extends MysqlConnection {
 case class DetailsLb(cha_id: Int, lb_id: Int, lb_name: String, lb_path: String)
 
 object DetailsLbs extends MysqlConnection {
-  def lbShow(id: Int): Seq[DetailsLb] = {
+
+  def lbList(id: Int): Seq[DetailsLb] = {
     implicit val getCharacterResult = GetResult(r => DetailsLb(r.<<, r.<<, r.<<, r.<<))
     val query = sql"""select
-                          characters.id,
-                          lb.id,
-                          lb.name,
-                          lb_images.path
-                          from characters
-                          left join character_has_lbs on characters.id = character_has_lbs.character_id
-                          left join lb on lb.id = character_has_lbs.lb_id
-                          left join lb_images on lb.id = lb_images.lb_id
-                          where characters.id = ${id};
+                      characters.id,
+                      lb.id,
+                      lb.name,
+                      lb_images.path
+                      from characters
+                      left join character_has_lbs on characters.id = character_has_lbs.character_id
+                      left join lb on lb.id = character_has_lbs.lb_id
+                      left join lb_images on lb.id = lb_images.lb_id
+                      where characters.id = ${id};
           """.as[DetailsLb]
     Await.result(database.run(query), Duration.Inf)
   }

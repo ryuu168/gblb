@@ -1,10 +1,14 @@
-@(chaShow: Seq[DetailsCharacter])(implicit messages: Messages)
-
+@(chaShow: Seq[DetailsCharacter], lb: Seq[DetailsLb])(implicit messages: Messages)
 
 @main("LB研究所（仮）") {
 
 <h1>きゃらしょうさいだよ</h1>
 @for(x <- chaShow){
 <img src= @x.cha_path><p>@x.cha_name</p>
+}
+
+<h2>LB覧</h2>
+@for(y <- lb){
+<img src= @y.lb_path><p>@y.lb_name</p>
 }
 }
