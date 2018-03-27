@@ -11,6 +11,11 @@ import scala.language.postfixOps
 
 case class CharacterJoinImage(id: Int, name: String, element: Int, path: String)
 
+trait MysqlConnection {
+  //DBコネクション
+  val database = Database.forConfig("gblb")
+}
+
 object CharacterJoinImages extends MysqlConnection {
 
   def all(): Seq[CharacterJoinImage] = {
