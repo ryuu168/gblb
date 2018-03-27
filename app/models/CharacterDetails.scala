@@ -9,28 +9,44 @@ import scala.concurrent.duration.Duration
 import scala.language.postfixOps
 
 
-case class DetailsPage(cha_id: Int, cha_name: String, element: Int, cha_path: String, lb_name: String, lb_path: String)
+case class DetailsCharacter(cha_id: Int, cha_name: String, element: Int, cha_path: String)
 
-object DetailsPages extends MysqlConnection {
+object DetailsCharacters extends MysqlConnection {
 
-  def characterShow(id: Int): Seq[DetailsPage] = {
-    implicit val getCharacterResult = GetResult(r => DetailsPage(r.<<, r.<<, r.<<, r.<<, r.<<, r.<<))
+  def characterShow(id: Int): Seq[DetailsCharacter] = {
+    implicit val getCharacterResult = GetResult(r => DetailsCharacter(r.<<, r.<<, r.<<, r.<<))
     val query = sql"""select
                       characters.id,
                       characters.name,
                       characters.element,
-                      images.path,
-                      lb.name,
-                      lb_images.path
+                      images.path
                       from characters
-                      left join images on characters.id = images.character_id
-                      left join character_has_lbs on characters.id = character_has_lbs.character_id
-                      left join lb on lb.id = character_has_lbs.lb_id
-                      left join lb_images on lb.id = lb_images.lb_id
+                      join images on characters.id = images.character_id
                       where characters.id = ${id};
-      """.as[DetailsPage]
+      """.as[DetailsCharacter]
     Await.result(database.run(query), Duration.Inf)
   }
 }
 
-case class 
+
+case class DetailsLb(cha_id: Int, lb_id: Int, lb_name: String, lb_path: String)
+
+object DetailsLbs extends MysqlConnection {
+
+  def lbList(id: Int): Seq[DetailsLb] = {
+    implicit val getCharacterResult = GetResult(r => DetailsLb(r.<<, r.<<, r.<<, r.<<))
+    val query = sql"""select
+                      characters.id,
+                      lb.id,
+                      lb.name,
+                      lb_images.path
+                      from characters
+                      left join character_has_lbs on characters.id = character_has_lbs.character_id
+                      left join lb on lb.id = character_has_lbs.lb_id
+                      left join lb_images on lb.id = lb_images.lb_id
+                      where characters.id = ${id};
+          """.as[DetailsLb]
+    Await.result(database.run(query), Duration.Inf)
+  }
+}
+

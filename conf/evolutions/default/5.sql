@@ -19,6 +19,23 @@ insert into character_has_lbs(lb_id, character_id) values(80, 1);
 insert into character_has_lbs(lb_id, character_id) values(82, 1);
 insert into character_has_lbs(lb_id, character_id) values(12, 1);
 insert into character_has_lbs(lb_id, character_id) values(113, 1);
+insert into character_has_lbs(lb_id, character_id) values(1, 2);
+insert into character_has_lbs(lb_id, character_id) values(5, 2);
+insert into character_has_lbs(lb_id, character_id) values(27, 2);
+insert into character_has_lbs(lb_id, character_id) values(21, 2);
+insert into character_has_lbs(lb_id, character_id) values(24, 2);
+insert into character_has_lbs(lb_id, character_id) values(2, 2);
+insert into character_has_lbs(lb_id, character_id) values(6, 2);
+insert into character_has_lbs(lb_id, character_id) values(9, 2);
+insert into character_has_lbs(lb_id, character_id) values(77, 2);
+insert into character_has_lbs(lb_id, character_id) values(73, 2);
+insert into character_has_lbs(lb_id, character_id) values(15, 2);
+insert into character_has_lbs(lb_id, character_id) values(18, 2);
+insert into character_has_lbs(lb_id, character_id) values(22, 2);
+insert into character_has_lbs(lb_id, character_id) values(60, 2);
+insert into character_has_lbs(lb_id, character_id) values(113, 2);
+
+
 
 
 # --- !Downs
